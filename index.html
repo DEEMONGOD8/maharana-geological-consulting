@@ -1,29 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maharana Geological Consulting</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f5f5f5;
+}
+
+header{
+background:url('https://images.unsplash.com/photo-1581093588401-22b4c3e3e7c5') no-repeat center;
+background-size:cover;
+color:white;
+text-align:center;
+padding:100px 20px;
+}
+
+header h1{
+font-size:40px;
+margin:0;
+}
+
+header p{
+font-size:20px;
+}
+
+.section{
+padding:40px;
+background:white;
+margin:20px;
+border-radius:10px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#e8f5e9;
+padding:20px;
+border-radius:10px;
+}
+
+form input, form textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid gray;
+}
+
+button{
+background:green;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:green;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+font-size:20px;
+}
+
+</style>
 </head>
 
 <body>
 
+<header>
 <h1>Maharana Geological Consulting</h1>
+<p>Professional Geological and GIS Consulting Services</p>
+<p>Akash Maharana - Geologist</p>
+</header>
 
-<h2>Akash Maharana</h2>
-<p>Professional Geological Consulting Services</p>
+<div class="section">
+<h2>About</h2>
+<p>Akash Maharana is a professional geologist with 6+ years of experience in Greenfield and Brownfield exploration, GIS mapping, Surpac modeling, AutoCAD drafting, drone data analysis and geological consulting.</p>
+</div>
 
-<h3>Services</h3>
-<ul>
-<li>Geological Consulting</li>
-<li>GIS Mapping</li>
-<li>Drone Data Analysis</li>
-<li>Surpac Modeling</li>
-<li>AutoCAD Drafting</li>
-<li>Technical Reports</li>
-</ul>
+<div class="section">
+<h2>Services</h2>
 
-<h3>Contact</h3>
-<p>WhatsApp: 7088370943</p>
+<div class="services">
+
+<div class="card">Geological Consulting</div>
+<div class="card">GIS Mapping and Analysis</div>
+<div class="card">Drone Data Processing</div>
+<div class="card">Surpac Geological Modeling</div>
+<div class="card">AutoCAD Geological Drafting</div>
+<div class="card">Geological Report Preparation</div>
+<div class="card">Exploration Data Interpretation</div>
+<div class="card">Mining Project Support</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>Consulting Request</h2>
+
+<form action="https://formspree.io/f/yourformid" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="text" name="company" placeholder="Company Name">
+
+<input type="text" name="location" placeholder="Project Location">
+
+<input type="text" name="service" placeholder="Service Required">
+
+<textarea name="message" placeholder="Project Details"></textarea>
+
+<input type="text" name="whatsapp" placeholder="WhatsApp Number">
+
+<button type="submit">Submit Request</button>
+
+</form>
+
+<br>
+
+<button onclick="sendWhatsApp()">Send via WhatsApp</button>
+
+</div>
+
+<div class="section">
+<h2>Contact</h2>
+
+<p>WhatsApp: +91 7088370943</p>
 <p>Email: akashmaharana@outlook.in</p>
+<p>Location: Odisha, India</p>
+
+</div>
+
+<footer>
+<p>Maharana Geological Consulting</p>
+<p>Akash Maharana - Geologist</p>
+<p>All Rights Reserved</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917088370943">W</a>
+
+<script>
+
+function sendWhatsApp(){
+
+let message="Hello, I want geological consulting for my project.";
+
+window.open("https://wa.me/917088370943?text="+encodeURIComponent(message));
+
+}
+
+</script>
 
 </body>
-</html>
+  </html>
